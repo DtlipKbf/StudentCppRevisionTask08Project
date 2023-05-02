@@ -21,5 +21,8 @@
  */
 
 int task03(int a, int b, int c, int d) {
-	return 0;
+
+	int min = (a < b&& a < c&& a < d) ? a : (b < c&& b < d) ? b : (c < d) ? c : d;
+
+	return min;
 }
