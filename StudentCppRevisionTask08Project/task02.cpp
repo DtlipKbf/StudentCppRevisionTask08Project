@@ -26,12 +26,20 @@
  *	[output 3]: Descending arithmetic progression.
  *
  *	[ input 4]: 7 7 7 7
- *	[output 4]: Monotonic arithmetic progression.
+ *	[output 4]: 
  * 
  *	[ input 5]: 2 4 8 16
  *	[output 5]: No arithmetic progression.
  */
 
 string task02(int a, int b, int c, int d) {
-	return "?";
+	string msg = "";
+
+	if (b - a != c - b || c - b != d - c) {
+		return "No arithmetic progression.";
+	}
+
+	msg = (b - a > 0) ? "Ascending arithmetic progression." : (b - a < 0) ? "Descending arithmetic progression." : "Monotonic arithmetic progression.";
+
+	return msg;
 }
