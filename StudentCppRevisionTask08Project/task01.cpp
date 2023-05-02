@@ -25,5 +25,11 @@
  */
 
 int task01(int a, int b, int c, int d) {
-	return 0;
+	int count;
+	
+	count = (a != b && b != c && c != d && a != d) ? 0 :
+		(a == b && b == c && c == d) ? 4 :
+		(a == b && b == c || a == c && c == d || a == b && b == d || c == b && b == d) ? 3 : 2;
+
+	return count;
 }
