@@ -38,12 +38,18 @@
  */
 
 int task05(int month, int year) {
-	int result = 0;
-	if (month <= 0 || month > 12 || year < 0) {
-		return result;
+	if (month <= 0 || month > 12) {
+		return 0;
 	}
-	
-	//cout << month << " " << year << endl;
+
+	int result = 31;
+
+	if (month == 4 || month == 6 || month == 9 || month == 11) {
+		result = 30;
+	}
+	else if (month == 2) {		
+		result = (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)) ? 29 : 28;
+	} 
 
 	return result;
 }

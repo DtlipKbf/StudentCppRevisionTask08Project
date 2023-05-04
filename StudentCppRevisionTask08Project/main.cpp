@@ -7,6 +7,6 @@ int main() {
 	//testingTask04();
 	testingTask05();
 	//testingTask06();
-	testingTaskX();
+	//testingTaskX();
 	return 0;
 }
