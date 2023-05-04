@@ -43,7 +43,7 @@ int task05(int month, int year) {
 		return result;
 	}
 	
-	cout << month << " " << year << endl;
+	//cout << month << " " << year << endl;
 
 	return result;
 }

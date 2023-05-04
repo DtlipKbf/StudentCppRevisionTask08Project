@@ -46,5 +46,26 @@
 */
 
 string taskX(int a1, int b1, int c1, int a2, int b2, int c2) {
-	return "?";
+	if (a1 <= 0 || a2 <= 0 || b1 <= 0 || b2 <= 0 || c1 <= 0 || c2 <= 0) return "Error.";
+	
+	//1
+	int max1 = (a1 > b1 && a1 > c1) ? a1 : (b1 > c1) ? b1 : c1;
+	int min1 = (a1 < b1 && a1 < c1) ? a1 : (b1 < c1) ? b1 : c1;
+	int avg1 = a1 + b1 + c1 - min1 - max1;
+	a1 = max1;
+	b1 = avg1;
+	c1 = min1;
+
+	//2
+	int max2 = (a2 > b2 && a2 > c2) ? a2 : (b2 > c2) ? b2 : c2;
+	int min2 = (a2 < b2 && a2 < c2) ? a2 : (b2 < c2) ? b2 : c2;
+	int avg2 = a2 + b2 + c2 - min2 - max2;
+	a2 = max2;
+	b2 = avg2;
+	c2 = min2;
+
+	if (a1 == a2 && b1 == b2 && c1 == c2) return "Boxes are equal.";
+
+	return (a1 <= a2 && b1 <= b2 && c1 <= c2) ? "The first box is smaller than the second one." : 
+		(a1 >= a2 && b1 >= b2 && c1 >= c2) ? "The first box is larger than the second one." : "Boxes are incomparable.";
 }
