@@ -27,5 +27,10 @@
  */
 
 int task06(int a, int b, int c) {
-	return 0;
+	if (a == b || b == c || a == c) return 0;
+
+	int max = (a > b && a > c) ? a : (b > c) ? b : c;
+	int min = (a < b&& a < c) ? a : (b < c) ? b : c;
+
+	return a + b + c - min - max;
 }

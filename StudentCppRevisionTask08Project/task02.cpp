@@ -26,7 +26,7 @@
  *	[output 3]: Descending arithmetic progression.
  *
  *	[ input 4]: 7 7 7 7
- *	[output 4]: 
+ *	[output 4]: Monotonic arithmetic progression.
  * 
  *	[ input 5]: 2 4 8 16
  *	[output 5]: No arithmetic progression.

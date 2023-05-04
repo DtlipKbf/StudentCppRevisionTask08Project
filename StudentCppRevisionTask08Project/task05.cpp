@@ -38,5 +38,12 @@
  */
 
 int task05(int month, int year) {
-	return 0;
+	int result = 0;
+	if (month <= 0 || month > 12 || year < 0) {
+		return result;
+	}
+	
+	cout << month << " " << year << endl;
+
+	return result;
 }
